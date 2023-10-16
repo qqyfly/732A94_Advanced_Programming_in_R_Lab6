@@ -1,9 +1,11 @@
-# 732A94_Advanced_Programming_in_R_Lab6
-
-<!-- badges: start -->
-  [![R-CMD-check](https://github.com/qqyfly/732A94_Advanced_Programming_in_R_Lab6/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/qqyfly/732A94_Advanced_Programming_in_R_Lab6/actions/workflows/R-CMD-check.yaml)
-  <!-- badges: end -->
-  
+---
+title: "lab report knapsack"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{lab report knapsack}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
 # Overview
 
 The `knapsack` package provides three exported functions to solve solve knapsack problem. An extra Rcpp version of brute_force_knapsack also provided.
@@ -12,7 +14,7 @@ The `knapsack` package provides three exported functions to solve solve knapsack
 
 To install the `knapsack` package, use the following commands:
 
-```
+```{r install-linreg-package, eval=FALSE}
 devtools::install_github("qqyfly/732A94_Advanced_Programming_in_R_Lab6", build_vignettes = TRUE)
 ```
 
@@ -20,7 +22,7 @@ devtools::install_github("qqyfly/732A94_Advanced_Programming_in_R_Lab6", build_v
 
 In this step, we need to load the installed library `knapsack`. The code is showed below.
 
-```
+```{r}
 library(knapsack)
 ```
 
@@ -28,7 +30,7 @@ library(knapsack)
 
 Some test data is needed to execute the function.
 
-```
+```{r}
 set.seed(42, kind = "Mersenne-Twister", normal.kind = "Inversion")
 n <- 2000
 knapsack_objects <- data.frame(
@@ -38,22 +40,22 @@ knapsack_objects <- data.frame(
 ```
 
 ## brute force knapsack R version
-```
+```{r}
 brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500)
 ```
 
 
 ##  dynamic knapsack
-```
+```{r}
 knapsack_dynamic(x = knapsack_objects[1:8,], W = 2000)
 ```
 
 ## greedy knapsack
-```
+```{r}
 greedy_knapsack(x = knapsack_objects[1:8,], W = 3500)
 ```
 
 ## brute force knapsack Rcpp version
-```
-brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500, fast = TRUE)
+```{r}
+#brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500, fast = TRUE)
 ```
