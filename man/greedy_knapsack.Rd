@@ -2,17 +2,15 @@
 % Please edit documentation in R/knapsack.R
 \name{greedy_knapsack}
 \alias{greedy_knapsack}
-\title{using DP algorithm to solve knapsack problem}
+\title{using greedy algorithm to solve knapsack problem}
 \usage{
-greedy_knapsack(x, W, fast = FALSE)
+greedy_knapsack(x, W)
 }
 \arguments{
 \item{x}{data.frame contains value and weight of every item}
 
 \item{W}{total weight (max) can hold}
-
-\item{fast}{using RCpp to implement this function or not,default set to FALSE}
 }
 \description{
-using DP algorithm to solve knapsack problem
+using greedy algorithm to solve knapsack problem
 }

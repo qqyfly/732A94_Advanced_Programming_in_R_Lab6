@@ -4,7 +4,7 @@
 \alias{brute_force_knapsack}
 \title{using brute force algorithm to solve knapsack problem}
 \usage{
-brute_force_knapsack(x, W, fast = FALSE, parallel = FALSE)
+brute_force_knapsack(x, W, fast = FALSE)
 }
 \arguments{
 \item{x}{data.frame contains value and weight of every item}
@@ -12,8 +12,6 @@ brute_force_knapsack(x, W, fast = FALSE, parallel = FALSE)
 \item{W}{total weight (max) can hold}
 
 \item{fast}{using RCpp to implement this function or not,default set to FALSE}
-
-\item{parallel}{using parallel package to implement this function or not,default set to FALSE}
 }
 \description{
 using brute force algorithm to solve knapsack problem

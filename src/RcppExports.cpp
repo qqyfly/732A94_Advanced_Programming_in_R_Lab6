@@ -10,30 +10,6 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// greedy_knapsack_rcpp
-List greedy_knapsack_rcpp(const DataFrame& x, const int WD);
-RcppExport SEXP _knapsack_greedy_knapsack_rcpp(SEXP xSEXP, SEXP WDSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const DataFrame& >::type x(xSEXP);
-    Rcpp::traits::input_parameter< const int >::type WD(WDSEXP);
-    rcpp_result_gen = Rcpp::wrap(greedy_knapsack_rcpp(x, WD));
-    return rcpp_result_gen;
-END_RCPP
-}
-// knapsack_dynamic_rcpp
-List knapsack_dynamic_rcpp(const DataFrame& x, const int WD);
-RcppExport SEXP _knapsack_knapsack_dynamic_rcpp(SEXP xSEXP, SEXP WDSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const DataFrame& >::type x(xSEXP);
-    Rcpp::traits::input_parameter< const int >::type WD(WDSEXP);
-    rcpp_result_gen = Rcpp::wrap(knapsack_dynamic_rcpp(x, WD));
-    return rcpp_result_gen;
-END_RCPP
-}
 // brute_force_knapsack_rcpp
 List brute_force_knapsack_rcpp(const DataFrame& x, const int WD);
 RcppExport SEXP _knapsack_brute_force_knapsack_rcpp(SEXP xSEXP, SEXP WDSEXP) {
@@ -48,8 +24,6 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_knapsack_greedy_knapsack_rcpp", (DL_FUNC) &_knapsack_greedy_knapsack_rcpp, 2},
-    {"_knapsack_knapsack_dynamic_rcpp", (DL_FUNC) &_knapsack_knapsack_dynamic_rcpp, 2},
     {"_knapsack_brute_force_knapsack_rcpp", (DL_FUNC) &_knapsack_brute_force_knapsack_rcpp, 2},
     {NULL, NULL, 0}
 };
