@@ -56,11 +56,6 @@ knapsack_dynamic(x = knapsack_objects[1:8,], W = 2000)
 greedy_knapsack(x = knapsack_objects[1:8,], W = 3500)
 ```
 
-## brute force knapsack Rcpp version
-```{r}
-brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500, fast = TRUE)
-```
-
 ## Questions and Answers
 Question for Brute force search: How much time does it takes to run the algorithm for n = 16 objects?
 ```{r}
