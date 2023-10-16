@@ -79,4 +79,4 @@ system.time(greedy_knapsack(x = knapsack_objects[1:1000000,], W = 3500))
 
 Question after profile: What performance gain could you get by trying to improving your code?
 
-Answer: We can  use C++ to rewrite the code to get huge improvement, the following result using the same data but with C++ implementation.
+Answer: We can  use C++ to rewrite the code to get huge improvement.
