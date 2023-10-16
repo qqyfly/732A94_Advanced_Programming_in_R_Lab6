@@ -14,6 +14,8 @@
 #' @param x data.frame contains value and weight of every item
 #' @param W total weight (max) can hold
 #' @param fast using RCpp to implement this function or not,default set to FALSE 
+#' @useDynLib knapsack
+#' @importFrom Rcpp evalCppbrowser
 #' @export 
 #' 
 brute_force_knapsack <- function(x, W, fast = FALSE){
@@ -30,7 +32,7 @@ brute_force_knapsack <- function(x, W, fast = FALSE){
   
   if(fast){
     #RCpp implementation
-    ret  <- brute_force_knapsack_rcpp(x, W)
+    ret  <- brute_force_knapsack_rcpp(x,W)
   }else{
     # Normal R implementation
     n <- length(x$w)
